@@ -1,8 +1,11 @@
 {
   "countdown": {
-    "tanggal_target": "2025-10-15T08:54:20.768Z"
+    "tanggal_target": "2025-10-15T08:54:45.612Z"
   },
-  "tahun_ajaran": "2025/2026",
-  "nama_sekolah": "SMP N 1 PADAMARA",
-  "nama_kelas": "Kelas IX C"
+  "galeri": [
+    {
+      "gambar": "/images/uploads/1000501163.jpg",
+      "deskripsi": "Fotbar Saat Maulid Nabi Muhammad Saw"
+    }
+  ]
 }
