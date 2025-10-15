@@ -13,57 +13,64 @@ collections:
         label: "Data Utama Website"
         name: "data"
         fields:
-          - { label: "Nama Kelas", name: "nama_kelas", widget: "string" }
-          - { label: "Nama Sekolah", name: "nama_sekolah", widget: "string" }
-          - { label: "Tahun Ajaran", name: "tahun_ajaran", widget: "string" }
-          - { label: "Link Musik", name: "link_musik", widget: "string", hint: "Contoh: /audio/lagu-kelas.mp3" }
-          - { label: "Teks Footer", name: "teks_footer", widget: "string", default: "© 2025 Kelas IX C | Dibuat dengan semangat kebersamaan." }
+          - { label: "Nama Kelas", name: "nama_kelas", widget: "string", required: false }
+          - { label: "Nama Sekolah", name: "nama_sekolah", widget: "string", required: false }
+          - { label: "Tahun Ajaran", name: "tahun_ajaran", widget: "string", required: false }
+          - { label: "Link Musik", name: "link_musik", widget: "string", required: false, hint: "Contoh: /audio/lagu-kelas.mp3" }
+          - { label: "Teks Footer", name: "teks_footer", widget: "string", required: false, default: "© 2025 Kelas IX C | Dibuat dengan semangat kebersamaan." }
           - label: "Kartu Ringkasan"
             name: "kartu_ringkasan"
             widget: "list"
+            required: false
             fields:
-              - { label: "Angka", name: "angka", widget: "string" }
-              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Angka", name: "angka", widget: "string", required: false }
+              - { label: "Label", name: "label", widget: "string", required: false }
           - label: "Hitung Mundur"
             name: "countdown"
             widget: "object"
+            required: false
             fields:
-              - { label: "Judul", name: "judul", widget: "string" }
-              - { label: "Tanggal Target", name: "tanggal_target", widget: "datetime" }
+              - { label: "Judul", name: "judul", widget: "string", required: false }
+              - { label: "Tanggal Target", name: "tanggal_target", widget: "datetime", required: false }
           - label: "Struktur Kelas"
             name: "struktur_kelas"
             widget: "list"
+            required: false
             fields:
-              - { label: "Posisi", name: "posisi", widget: "string" }
-              - { label: "Nama", name: "nama", widget: "string" }
-              - { label: "Warna Latar", name: "warna", widget: "string", hint: "Gunakan kode warna hex, contoh: #FF6B6B" }
+              - { label: "Posisi", name: "posisi", widget: "string", required: false }
+              - { label: "Nama", name: "nama", widget: "string", required: false }
+              - { label: "Warna Latar", name: "warna", widget: "string", required: false, hint: "Gunakan kode warna hex, contoh: #FF6B6B" }
           - label: "Jadwal Pelajaran"
             name: "jadwal_pelajaran"
             widget: "list"
+            required: false
             fields:
-              - { label: "Jam", name: "jam", widget: "string" }
-              - { label: "Senin", name: "senin", widget: "string" }
-              - { label: "Selasa", name: "selasa", widget: "string" }
-              - { label: "Rabu", name: "rabu", widget: "string" }
-              - { label: "Kamis", name: "kamis", widget: "string" }
-              - { label: "Jumat", name: "jumat", widget: "string" }
-              - { label: "Sabtu", name: "sabtu", widget: "string" }
+              - { label: "Jam", name: "jam", widget: "string", required: false }
+              - { label: "Senin", name: "senin", widget: "string", required: false }
+              - { label: "Selasa", name: "selasa", widget: "string", required: false }
+              - { label: "Rabu", name: "rabu", widget: "string", required: false }
+              - { label: "Kamis", name: "kamis", widget: "string", required: false }
+              - { label: "Jumat", name: "jumat", widget: "string", required: false }
+              - { label: "Sabtu", name: "sabtu", widget: "string", required: false }
           - label: "Jadwal Piket"
             name: "jadwal_piket"
             widget: "list"
+            required: false
             fields:
-              - { label: "Hari", name: "hari", widget: "string" }
-              - { label: "Nama", name: "nama", widget: "list" }
+              - { label: "Hari", name: "hari", widget: "string", required: false }
+              - { label: "Nama", name: "nama", widget: "list", required: false }
           - label: "Pengumuman"
             name: "pengumuman"
             widget: "list"
+            required: false
             fields:
-              - { label: "Judul", name: "judul", widget: "string" }
-              - { label: "Tanggal", name: "tanggal", widget: "datetime" }
-              - { label: "Isi Pengumuman", name: "isi", widget: "markdown" }
+              - { label: "Judul", name: "judul", widget: "string", required: false }
+              - { label: "Tanggal", name: "tanggal", widget: "datetime", required: false }
+              - { label: "Isi Pengumuman", name: "isi", widget: "markdown", required: false }
           - label: "Galeri Foto"
             name: "galeri"
             widget: "list"
+            required: false
             fields:
-              - { label: "Gambar", name: "gambar", widget: "image" }
-              - { label: "Deskripsi", name: "deskripsi", widget: "string" }
+              - { label: "Gambar", name: "gambar", widget: "image", required: false }
+              - { label: "Deskripsi", name: "deskripsi", widget: "string", required: false }
