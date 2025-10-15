@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas</title>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style> body { font-family: sans-serif; padding: 20px; } .card { border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 8px; } </style>
+</head>
+<body>
+    <h1 id="nama-kelas">Memuat Website...</h1>
+    <hr>
+    <h2>Pengumuman</h2>
+    <div id="pengumuman-container"></div>
+
+    <script>
+        async function muatData() {
+            try {
+                const response = await fetch('/data.json');
+                if (!response.ok) throw new Error('File data.json tidak ditemukan.');
+                const data = await response.json();
+                document.getElementById('nama-kelas').innerText = data.nama_kelas || 'Nama Kelas Belum Diatur';
+                const container = document.getElementById('pengumuman-container');
+                container.innerHTML = '';
+                if (data.pengumuman && data.pengumuman.length > 0) {
+                    data.pengumuman.forEach(item => {
+                        container.innerHTML += `<div class="card"><h3>${item.judul}</h3><p>${item.isi}</p></div>`;
+                    });
+                } else {
+                    container.innerHTML = '<p>Belum ada pengumuman.</p>';
+                }
+            } catch (error) {
+                document.body.innerHTML = '<h1>Gagal memuat data.</h1><p>Pastikan Anda sudah mempublikasikan konten pertama dari halaman admin.</p>';
+            }
+        }
+        muatData();
+    </script>
+</body>
+</html>
